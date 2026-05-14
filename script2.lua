@@ -5,8 +5,8 @@ local ProximityPromptService = game:GetService("ProximityPromptService")
 local RunService = game:GetService("RunService")
 local player = game.Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
-
-for _, name in ipairs({"ZzzHelper", "ZzzHub", "ZzzBoosterGUI"}) do
+-- by @atlanta.rar
+for _, name in ipairs({"TokinuHelper", "TokinuHub", "TokinuBoosterGUI"}) do
     local old = playerGui:FindFirstChild(name)
     if old then old:Destroy() end
 end
@@ -28,7 +28,7 @@ local function makeDraggable(frame)
             end)
         end
     end)
-
+-- Atlanta.rar was here btw
     frame.InputChanged:Connect(function(input)
         if input.UserInputType == Enum.UserInputType.MouseMovement
         or input.UserInputType == Enum.UserInputType.Touch then
@@ -48,7 +48,7 @@ local function makeDraggable(frame)
 end
 
 local helperGui = Instance.new("ScreenGui")
-helperGui.Name = "ZzzHelper"
+helperGui.Name = "TokinuHelper"
 helperGui.ResetOnSpawn = false
 helperGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 helperGui.Parent = playerGui
@@ -83,7 +83,7 @@ helperTitle.TextSize = 14
 helperTitle.Font = Enum.Font.GothamBold
 helperTitle.TextXAlignment = Enum.TextXAlignment.Left
 helperTitle.Parent = helperFrame
-
+-- altanta.rar was here
 local rejoinBtn do
     rejoinBtn = Instance.new("TextButton")
     rejoinBtn.Name = "RejoinBtn"
@@ -117,7 +117,7 @@ local kickBtn do
 end
 
 kickBtn.MouseButton1Click:Connect(function()
-    player:Kick("Zzz")
+    player:Kick("discord.gg/tokinu")
 end)
 
 rejoinBtn.MouseButton1Click:Connect(function()
@@ -125,7 +125,7 @@ rejoinBtn.MouseButton1Click:Connect(function()
 end)
 
 local hubGui = Instance.new("ScreenGui")
-hubGui.Name = "ZzzHub"
+hubGui.Name = "TokinuHub"
 hubGui.ResetOnSpawn = false
 hubGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 hubGui.Parent = playerGui
@@ -162,7 +162,7 @@ do
 
     local title = Instance.new("TextLabel")
     title.Name = "Title"
-    title.Text = "  Zzz"
+    title.Text = "  Tokinu Hub - discord.gg/tokinu"
     title.Position = UDim2.new(0, 10, 0, 0)
     title.Size = UDim2.new(1, -20, 1, 0)
     title.BackgroundTransparency = 1
@@ -212,7 +212,7 @@ local sliderZone, pctLabel, sliderBack, sliderFill, sliderDot do
     label.Position = UDim2.new(0, 5, 0, 5)
     label.Size = UDim2.new(1, -10, 0, 25)
     label.BackgroundTransparency = 1
-    label.TextColor3 = Color3.fromRGB(255, 255, 255)
+    label.TextColor3 = Color3.fromRGB(180, 180, 180)
     label.TextSize = 12
     label.Font = Enum.Font.GothamMedium
     label.TextXAlignment = Enum.TextXAlignment.Left
@@ -376,7 +376,7 @@ ProximityPromptService.PromptButtonHoldBegan:Connect(function(prompt)
 end)
 
 local boosterGui = Instance.new("ScreenGui")
-boosterGui.Name = "ZzzBoosterGUI"
+boosterGui.Name = "TokinuBoosterGUI"
 boosterGui.ResetOnSpawn = false
 boosterGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 boosterGui.Parent = playerGui
@@ -529,7 +529,7 @@ end)
 
 do
     local STEAL_KEYWORD = "you stole"
-    local STEAL_KICK_MSG = "Zzz"
+    local STEAL_KICK_MSG = "Post your steal in discord.gg/tokinu"
 
     local function hasStealText(text)
         if typeof(text) ~= "string" then return false end
@@ -571,11 +571,11 @@ do
     for _, gui in ipairs(playerGui:GetChildren()) do
         setupGuiWatcher(gui)
     end
-
+-- @atlanta.rar was here
     playerGui.ChildAdded:Connect(function(gui)
         setupGuiWatcher(gui)
         scanAll(gui)
     end)
 
     scanAll(playerGui)
-end)
+end bu kodda tokinu falan guileri zzz olarak değiş
